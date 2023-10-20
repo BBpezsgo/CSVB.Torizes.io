@@ -1,7 +1,15 @@
 import * as HTTP from './http'
 import { compile } from './handlebars.js'
 
-const TEMPLATES_PATH = '/templates/'
+let TEMPLATES_PATH = './templates/';
+
+(() => {
+    if (window.location.host.endsWith('.github.io')) {
+        TEMPLATES_PATH = `${window.location.origin}/CSVB.Torizes.io/templates/`
+    } else {
+        TEMPLATES_PATH = `${window.location.origin}/templates/`
+    }
+})()
 
 export function CreateElement(htmlString: string): Element {
     const div = document.createElement(htmlString.startsWith('<tr') ? 'tbody' : 'div')
