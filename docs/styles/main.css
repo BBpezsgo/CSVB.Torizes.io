@@ -1,0 +1,15 @@
+header {
+    border: 1px solid;
+}
+
+aside {
+    border: 1px solid;
+}
+
+article {
+    border: 1px solid;
+}
+
+.articles-menu-hidden {
+    display: none;
+}

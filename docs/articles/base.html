@@ -5,21 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles/main.css">
-    <title>Törizés</title>
+    <title>Rákosi-korszak - Törizés</title>
 </head>
 
 <body>
 
 
     <div class="flex-container">
-        <h1><a href="/">Törizés</a></h1>
-        <button onclick="document.getElementById('articles-menu').classList.toggle('articles-menu-hidden')">Témák</button>
+        <header>
+            <h1><a href="/">Törizés</a> - Rákosi-korszak</h1>
+            <button onclick="document.getElementById('articles-menu').classList.toggle('articles-menu-hidden')">Témák</button>
+        </header>
         <div id="articles-menu" class="articles-menu-hidden">
             <ul id="articles-list">
-                <a href="/articles/base.html#rakosi">Rákosi-korszak</a>
+                <a href="#rakosi">Rákosi-korszak</a>
             </ul>
         </div>
-        <article>
+        <article id="article">
             
         </article>
     </div>
