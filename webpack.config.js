@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.ts',
+  entry: './docs/index.ts',
   module: {
     rules: [
       {
@@ -17,11 +17,11 @@ module.exports = {
   },
   output: {
     filename: 'scripts.js',
-    path: path.resolve(__dirname, 'web', 'scripts'),
+    path: path.resolve(__dirname, 'docs', 'scripts'),
   },
   devServer: {
     static: {      
-      directory: path.join(__dirname, 'web'),
+      directory: path.join(__dirname, 'docs'),
     },
     compress: true,
     port: 9000,

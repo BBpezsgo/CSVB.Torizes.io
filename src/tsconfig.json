@@ -3,7 +3,7 @@
         "module": "ES6",
         "moduleResolution": "Classic",
         "newLine": "CRLF",
-        "outDir": "../web/",
+        "outDir": "../docs/",
         "target": "es5",
         "sourceMap": false,
         "jsx": "preserve",
