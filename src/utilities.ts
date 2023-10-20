@@ -1,15 +1,15 @@
 import * as HTTP from './http'
 import { compile } from './handlebars.js'
 
-let TEMPLATES_PATH = './templates/';
-
-(() => {
+export function BasePath() {
     if (window.location.host.endsWith('.github.io')) {
-        TEMPLATES_PATH = `${window.location.origin}/CSVB.Torizes.io/templates/`
+        return `${window.location.origin}/CSVB.Torizes.io/`
     } else {
-        TEMPLATES_PATH = `${window.location.origin}/templates/`
+        return `${window.location.origin}/`
     }
-})()
+}
+
+const TEMPLATES_PATH = BasePath() + 'templates/'
 
 export function CreateElement(htmlString: string): Element {
     const div = document.createElement(htmlString.startsWith('<tr') ? 'tbody' : 'div')

@@ -22,7 +22,7 @@ async function Main() {
     const urlPath = window.location.pathname.split('/')
     const filename = urlPath[urlPath.length - 1]
 
-    const articles = JSON.parse(HTTP.Get('/database/articles.json'))
+    const articles = JSON.parse(HTTP.Get(Utilities.BasePath() + 'database/articles.json'))
 
     const articlesList = Utilities.GetElement('articles-list') as HTMLUListElement
     articlesList.innerHTML = ''
