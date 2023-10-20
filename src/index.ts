@@ -30,7 +30,7 @@ async function Main() {
     for (const articleId in articles) {
         const article = articles[articleId] as Article
         const newElement = document.createElement('li')
-        newElement.innerHTML = `<a href="/articles/base.html#${articleId}">${article.Name}</a>`
+        newElement.innerHTML = `<a href="${Utilities.BasePath()}articles/base.html#${articleId}">${article.Name}</a>`
         articlesList.appendChild(newElement)
     }
 
@@ -39,7 +39,7 @@ async function Main() {
         LoadArticle(uri.hash.replace('#', '').trim())
     })
 
-    if (window.location.pathname === '/articles/base.html') {
+    if (window.location.pathname.endsWith('/articles/base.html')) {
         LoadArticle(window.location.hash.replace('#', '').trim())
     }
 }
