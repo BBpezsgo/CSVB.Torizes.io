@@ -8,24 +8,29 @@
     <title>Rákosi-korszak - Törizés</title>
 </head>
 
-<body>
+<body class="flex-container">
 
+    <header>
+        <h1><a href="../">Törizés</a> - Rákosi-korszak</h1>
+        <button onclick="document.getElementById('articles-menu').classList.toggle('articles-menu-hidden')">Témák</button>
+    </header>
 
-    <div class="flex-container">
-        <header>
-            <h1><a href="../">Törizés</a> - Rákosi-korszak</h1>
-            <button onclick="document.getElementById('articles-menu').classList.toggle('articles-menu-hidden')">Témák</button>
-        </header>
-        <div id="articles-menu" class="articles-menu-hidden">
-            <ul id="articles-list">
-                <a href="#rakosi">Rákosi-korszak</a>
-            </ul>
-        </div>
-        <article id="article">
-            
-        </article>
+    <div id="articles-menu" class="articles-menu-hidden">
+        <ul id="articles-list">
+            <a href="#rakosi">Rákosi-korszak</a>
+        </ul>
     </div>
 
+    <article id="article">
+        
+    </article>
+
+    <footer>
+        <span>Kép forrásai:</span>
+        <ul id="image-sources">
+
+        </ul>
+    </footer>
 
     <script src="../scripts/setup.js"></script>
     <script src="../scripts/scripts.js"></script>

@@ -1,5 +1,8 @@
 {
     "rakosi": {
-        "Name": "Rákosi-korszak"
+        "Name": "Rákosi-korszak",
+        "ImageSources": {
+            "1.jpg": { "Label": "Történelem tankönyv 12.", "Url": "https://www.tankonyvkatalogus.hu/site/kiadvany/OH-TOR12TB" }
+        }
     }
 }

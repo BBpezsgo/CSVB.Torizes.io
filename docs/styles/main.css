@@ -1,15 +1,58 @@
-header {
-    border: 1px solid;
+header, aside, article, footer {
+    border: 4px ridge;
 }
 
-aside {
-    border: 1px solid;
-}
-
-article {
-    border: 1px solid;
+button {
+    user-select: none;
 }
 
 .articles-menu-hidden {
     display: none;
+}
+
+header h1 {
+    text-align: center;
+}
+
+#image-sources {
+    list-style: none;
+}
+
+article h1 {
+    text-align: center;
+}
+
+article .sub-title {
+    color: #555;
+    display: block;
+    font-size: .6em;
+    font-weight: 500;
+}
+
+article section {
+    margin: 0px 0px 32px 3%;
+}
+
+article section h2 {
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+article section p {
+    margin-left: 5%;
+}
+
+article section ul {
+    list-style-type: '- ';
+    list-style-position: outside;
+}
+
+article section .list-sub {
+    margin: 0px 0px 0px 8px;
+}
+
+article section img {
+    max-width: 50%;
+    max-height: 300px;
+    user-select: none;
 }
