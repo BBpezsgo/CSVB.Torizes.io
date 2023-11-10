@@ -1,5 +1,12 @@
-header, aside, article, footer {
-    border: 4px ridge;
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column; 
+}
+
+main {
+    flex: 1;
 }
 
 button {
@@ -18,41 +25,262 @@ header h1 {
     list-style: none;
 }
 
-article h1 {
-    text-align: center;
+#article {
+    background-color: var(--secondary-background);
+    margin: 20px 10%;
+    box-shadow: 10px 10px black;
+    color: #fff;
 }
 
-article .sub-title {
-    color: #555;
+#article h1 {
+    text-align: center;
+    padding: 30px;
+}
+
+#article img {
+    margin: 10px;
+    border: 2px solid black;
+    box-shadow: #0004 0px 0px 20px;
+}
+
+#article .title {
+    text-decoration-style: solid;
+    text-decoration-color: #fff;
+    text-decoration-line: underline;
+}
+
+#article .sub-title {
+    color: #fff8;
     display: block;
     font-size: .6em;
     font-weight: 500;
 }
 
-article section {
+#article section {
     margin: 0px 0px 32px 3%;
 }
 
-article section h2 {
+#article section h2 {
     font-weight: 500;
     font-size: 1.2em;
+    margin: 0px 0px 10px 0px;
 }
 
-article section p {
+#article section p {
     margin-left: 5%;
 }
 
-article section ul {
+#article section ul {
     list-style-type: '- ';
     list-style-position: outside;
+    margin: 0px 0px 0px 20px;
 }
 
-article section .list-sub {
+#article section .list-sub {
     margin: 0px 0px 0px 8px;
 }
 
-article section img {
+#article section img {
     max-width: 50%;
     max-height: 300px;
     user-select: none;
 }
+
+a:not(.hidden-link) {
+    color: #ffa500;
+    cursor: pointer;
+}
+
+a.hidden-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a {
+    font-variant: small-caps;
+}
+
+/* #region ZoliMateSompala */
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--primary-background);
+}
+
+.header-left img {
+    height: 10vh;
+    padding: 10px;
+    position: absolute;
+}
+
+.header-left {
+    height: 10vh;
+    width: 60%;
+    margin-left: 5vh;
+}
+
+.header-middle {
+    border-top: 10vh solid var(--primary-background);
+    border-right: 50px solid var(--secondary-background);
+}
+
+.header-right{
+    height: 10vh;
+    background-color: var(--secondary-background);
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.header-right h1{
+    font-size: 1.5rem;
+}
+
+body{
+    background: linear-gradient(var(--transparent-background), var(--transparent-background)), url('../img/background.png');
+    background-repeat: repeat;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.container{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin-top: 5vh;
+    transition: ease-in-out 2s;
+}
+
+.card{
+    height: 80%;
+    width: 30%;
+    border: 1px solid var(--secondary-background);
+    margin: 30px;
+    background-color: var(--secondary-background);
+    color: white;
+    box-shadow: 10px 10px black;
+    margin-top: 0px;
+}
+
+.card-top{
+    height: 50%;
+}
+
+.card-theme{
+    background-color: orange;
+    padding: 5px;
+    margin: 15px;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.card-image img{
+    width: 100%;
+    height: auto;
+}
+
+.card.bottom{
+    height: 50%;
+}
+
+.card-year{
+    margin: 5%;
+    color: gray;
+    font-size: 0.8em;
+}
+
+.card-name{
+    margin: 5%;
+    font-size: 0.7em;
+}
+
+footer{
+    display: flex;
+    background-color: var(--secondary-background);
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+}
+
+footer img{
+    height: 8vh;
+    padding: 10px;
+}
+
+.card-text{
+    text-align: justify;
+    font-size: large;
+    display: none;
+    margin: 5px;
+}
+
+.paragrafus{
+    margin: 0.5vw;
+}
+
+.imgszoveg{
+    width: 50%;
+    height: auto;
+    float: right;
+    margin-left: 0.5vw;
+}
+
+.imgszoveg2{
+    width: 30%;
+    height: auto;
+    float: left;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+}
+
+.imgszoveg3{
+    width: 10%;
+    height: auto;
+    float: left;
+    margin-right: 0.5vw;
+}
+
+.gomb{
+    color: white;
+    font-size: 0.9vw;
+    padding: 5px;
+    background-color: var(--primary-background);
+    border-radius: 7px;
+    border: 2px solid var(--secondary-background);
+    margin-top: 2vw;
+    position: relative;
+    left: 47.5%;
+    width: 5vw;
+    text-align: center;
+}
+
+.gomb:hover{
+    font-size: 0.9vw;
+    padding: 5px;
+    background-color: var(--secondary-background);
+    border-radius: 7px;
+    border: 2px solid var(--primary-background);
+    margin-top: 2vw;
+    position: relative;
+    left: 47.5%;
+    width: 5vw;
+    text-align: center;
+}
+
+/* #endregion */

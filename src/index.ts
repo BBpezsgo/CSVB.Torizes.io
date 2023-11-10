@@ -48,18 +48,38 @@ async function LoadArticle(articleId: string) {
 
 const articles = JSON.parse(HTTP.Get(Utilities.BasePath() + 'database/articles.json')) as { [article: string]: Article }
 
-async function Main() {
-    const urlPath = window.location.pathname.split('/')
-    const filename = urlPath[urlPath.length - 1]
-
-    const articlesList = Utilities.GetElement('articles-list') as HTMLUListElement
+function ShowArticleList() {
+    const articlesList = Utilities.GetElement('articles-list') as HTMLElement
     articlesList.innerHTML = ''
 
     for (const articleId in articles) {
         const article = articles[articleId] as Article
-        const newElement = document.createElement('li')
-        newElement.innerHTML = `<a href="${Utilities.BasePath()}articles/base.html#${articleId}">${article.Name}</a>`
+        const newElement = document.createElement('div')
+        newElement.classList.add('card')
+        let htmlBuilder = ''
+        htmlBuilder += `<a href="${Utilities.BasePath()}articles/base.html#${articleId}" class="hidden-link">`
+        htmlBuilder += `<div class="card-top" id="card1-top">`
+        htmlBuilder += `<div class="card-theme">${article.Group}</div>`
+        htmlBuilder += `<div class="card-image"><img src="./img/cards/${articleId}.jpg"></div>`
+        htmlBuilder += `</div>`
+        htmlBuilder += `<div class="card-bottom" id="card1-bottom">`
+        htmlBuilder += `<div class="card-year" id="card1-year">2023</div>`
+        htmlBuilder += ` <div class="card-name" id="card1-name"><h1>${article.Name}</h1></div>`
+        htmlBuilder += `</div>`
+        htmlBuilder += `</a>`
+        newElement.innerHTML = htmlBuilder
         articlesList.appendChild(newElement)
+    }
+}
+
+async function Main() {
+    const urlPath = window.location.pathname.split('/')
+    const filename = urlPath[urlPath.length - 1]
+
+    try {
+        ShowArticleList()
+    } catch (error) {
+        console.warn(error)
     }
 
     window.addEventListener('hashchange', (e) => {

@@ -4,32 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/vars.css">
     <link rel="stylesheet" href="../styles/main.css">
     <title>Rákosi-korszak - Törizés</title>
 </head>
 
-<body class="flex-container">
-
+<body>
     <header>
-        <h1><a href="../">Törizés</a> - Rákosi-korszak</h1>
-        <button onclick="document.getElementById('articles-menu').classList.toggle('articles-menu-hidden')">Témák</button>
+        <div class="header-left">
+            <img src="../img/gszi.png" alt="GSZI Logo">
+        </div>
+        <div class="header-middle">
+
+        </div>
+        <div class="header-right">
+            <h1><a href="../">Törizés</a> - Rákosi-korszak</h1>
+        </div>
     </header>
 
-    <div id="articles-menu" class="articles-menu-hidden">
-        <ul id="articles-list">
-            <a href="#rakosi">Rákosi-korszak</a>
-        </ul>
-    </div>
-
-    <article id="article">
+    <main id="article">
         
-    </article>
+    </main>
 
-    <footer>
-        <span>Kép forrásai:</span>
-        <ul id="image-sources">
-
-        </ul>
+    <footer id="footer">
+        <p style="display: block;">
+            <img src="../img/gszi.png" alt="GSZI Logo">
+            <h1><a href="https://www.nemesgszi.hu/" target="_blank" class="hidden-link">Nemes GSZI</a></h1>
+        </p>
+        <p style="display: block;">
+            <span>Kép forrásai:</span>
+            <ul id="image-sources">
+    
+            </ul>
+        </p>
     </footer>
 
     <script src="../scripts/setup.js"></script>
