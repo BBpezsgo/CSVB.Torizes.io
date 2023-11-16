@@ -1,6 +1,8 @@
 import { Article } from './articles'
 import * as HTTP from './http'
 import * as Utilities from './utilities'
+import * as Timeline from './timeline'
+import * as Time from './big-date'
 
 declare global {
     interface Window {
@@ -29,6 +31,13 @@ async function LoadArticle(articleId: string) {
         })
         .catch(console.error)
     
+    const titleSpan = Utilities.TryGetElement('article-title')
+    if (titleSpan) {
+        titleSpan.textContent = article.Name
+    }
+
+    document.title = `${article.Name} - Törizés`
+    
     if (article.ImageSources) {
         const imageSourcesConatiner = Utilities.GetElement('image-sources')
         for (const imageId in article.ImageSources) {
@@ -47,6 +56,42 @@ async function LoadArticle(articleId: string) {
 }
 
 const articles = JSON.parse(HTTP.Get(Utilities.BasePath() + 'database/articles.json')) as { [article: string]: Article }
+
+type Range<T> = { start: T, end: T }
+
+const articleTimelineLookup: { dates: string[], ranges: string[] } = {
+    dates: [],
+    ranges: [],
+}
+
+const articleTimeline: { points: Timeline.TimelinePoint[], ranges: Timeline.TimelineInterval[] } = {
+    points: [],
+    ranges: [],
+}
+
+for (const articleId in articles) {
+    const article = articles[articleId]
+    const time = article.Time
+    if (typeof time === 'string') {
+        const pointTime = Time.Parse(time)
+
+        articleTimelineLookup.dates.push(articleId)
+        articleTimeline.points.push({
+            date: pointTime,
+            label: article.Name,
+        })
+    } else {
+        const start = Time.Parse(time.Start)
+        const end = Time.Parse(time.End)
+        const rangeTime = { start, end }
+        
+        articleTimelineLookup.ranges.push(articleId)
+        articleTimeline.ranges.push({
+            interval: rangeTime,
+            label: article.Name,
+        })
+    }
+}
 
 function ShowArticleList() {
     const articlesList = Utilities.GetElement('articles-list') as HTMLElement
@@ -72,6 +117,20 @@ function ShowArticleList() {
     }
 }
 
+function OnTimelineDateClick(index: number) {
+    const articleId = articleTimelineLookup.dates[index]
+    OnTimelineArticleClick(articleId)
+}
+
+function OnTimelineRangeClick(index: number) {
+    const articleId = articleTimelineLookup.ranges[index]
+    OnTimelineArticleClick(articleId)
+}
+
+function OnTimelineArticleClick(articleId: string) {
+    console.log('Clicked on article', articleId)
+}
+
 async function Main() {
     const urlPath = window.location.pathname.split('/')
     const filename = urlPath[urlPath.length - 1]
@@ -89,6 +148,11 @@ async function Main() {
 
     if (window.location.pathname.endsWith('/articles/base.html')) {
         LoadArticle(window.location.hash.replace('#', '').trim())
+    }
+
+    if (window.location.pathname == '/' || window.location.pathname == '') {
+        console.log('Show timeline')
+        Timeline.Show(articleTimeline.points, articleTimeline.ranges, OnTimelineDateClick, OnTimelineRangeClick)
     }
 }
 

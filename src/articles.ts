@@ -1,7 +1,7 @@
 export type Article = {
     Name: string
     Group: string
-    Time: { Start: string | number, End: string | number },
+    Time: { Start: string, End: string } | string,
     ImageSources?: {
         [image: string]: string | {
             Label: string

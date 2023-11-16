@@ -2,7 +2,23 @@
     "rakosi": {
         "Name": "Rákosi-korszak",
         "Group": "Újkor",
-        "Time": { "Start": "???", "End": "???" },
+        "Time": { "Start": "1948.1.1.", "End": "1956.10.23." },
+        "ImageSources": {
+            "1.jpg": { "Label": "Történelem tankönyv 12.", "Url": "https://www.tankonyvkatalogus.hu/site/kiadvany/OH-TOR12TB" }
+        }
+    },
+    "56": {
+        "Name": "1956-os forradalom és szabadságharc",
+        "Group": "Újkor",
+        "Time": "1956.10.23.",
+        "ImageSources": {
+            "1.jpg": { "Label": "Történelem tankönyv 12.", "Url": "https://www.tankonyvkatalogus.hu/site/kiadvany/OH-TOR12TB" }
+        }
+    },
+    "kadar": {
+        "Name": "Kádár korszak",
+        "Group": "Újkor",
+        "Time": { "Start": "1956.10.23.", "End": "1989.1.1." },
         "ImageSources": {
             "1.jpg": { "Label": "Történelem tankönyv 12.", "Url": "https://www.tankonyvkatalogus.hu/site/kiadvany/OH-TOR12TB" }
         }
