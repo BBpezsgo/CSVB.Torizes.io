@@ -150,7 +150,7 @@ async function Main() {
         LoadArticle(window.location.hash.replace('#', '').trim())
     }
 
-    if (window.location.pathname == '/' || window.location.pathname == '') {
+    if (Utilities.TryGetElement('lineCont')) {
         console.log('Show timeline')
         Timeline.Show(articleTimeline.points, articleTimeline.ranges, OnTimelineDateClick, OnTimelineRangeClick)
     }
