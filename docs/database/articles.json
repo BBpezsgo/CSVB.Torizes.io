@@ -22,5 +22,12 @@
         "ImageSources": {
             "1.jpg": { "Label": "Történelem tankönyv 12.", "Url": "https://www.tankonyvkatalogus.hu/site/kiadvany/OH-TOR12TB" }
         }
+    },
+    "ensz": {
+        "Name": "ENSZ",
+        "Group": "Újkor",
+        "ImageSources": {
+            "1.jpg": { "Label": "Történelem tankönyv 12.", "Url": "https://www.tankonyvkatalogus.hu/site/kiadvany/OH-TOR12TB" }
+        }
     }
 }

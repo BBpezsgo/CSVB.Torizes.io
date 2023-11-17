@@ -72,6 +72,7 @@ const articleTimeline: { points: Timeline.TimelinePoint[], ranges: Timeline.Time
 for (const articleId in articles) {
     const article = articles[articleId]
     const time = article.Time
+    if (!time) { continue }
     if (typeof time === 'string') {
         const pointTime = Time.Parse(time)
 
