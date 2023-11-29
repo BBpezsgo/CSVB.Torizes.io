@@ -9,8 +9,6 @@ export function BasePath() {
     }
 }
 
-const TEMPLATES_PATH = BasePath() + 'templates/'
-
 export function CreateElement(htmlString: string): Element {
     const div = document.createElement(htmlString.startsWith('<tr') ? 'tbody' : 'div')
     div.innerHTML = htmlString.trim()
@@ -20,25 +18,25 @@ export function CreateElement(htmlString: string): Element {
 }
 
 export async function TemplateAsync(name: string, values: object) {
-    const hbs = await HTTP.GetAsync(TEMPLATES_PATH + name + '.hbs')
+    const hbs = await HTTP.GetAsync(name + '.hbs')
     const html = compile(hbs)(values)
     return CreateElement(html) as HTMLElement
 }
 
 export function Template(name: string, values: object) {
-    const hbs = HTTP.Get(TEMPLATES_PATH + name + '.hbs')
+    const hbs = HTTP.Get(name + '.hbs')
     const html = compile(hbs)(values)
     return CreateElement(html) as HTMLElement
 }
 
 export async function TemplateAsyncRaw(name: string, values: object) {
-    const hbs = await HTTP.GetAsync(TEMPLATES_PATH + name + '.hbs')
+    const hbs = await HTTP.GetAsync(name + '.hbs')
     const html = compile(hbs)(values)
     return html as string
 }
 
 export function TemplateRaw(name: string, values: object) {
-    const hbs = HTTP.Get(TEMPLATES_PATH + name + '.hbs')
+    const hbs = HTTP.Get(name + '.hbs')
     const html = compile(hbs)(values)
     return html as string
 }

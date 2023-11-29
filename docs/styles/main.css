@@ -208,7 +208,8 @@ body{
     position: absolute;
 }
 
-.card-image img{
+.card-image img,
+.card-image object {
     width: 100%;
     height: auto;
 }

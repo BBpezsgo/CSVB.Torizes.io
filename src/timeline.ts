@@ -30,7 +30,7 @@ function HandleDateClick(e: MouseEvent, callback: (index: number) => void) {
     if (!spanNum) { return }
     spanNum = spanNum.replace('circle', '')
     try {
-        console.log('clicked on date', spanNum)
+        // console.log('clicked on date', spanNum)
         const i = parseInt(spanNum)
         // $(".active").removeClass("active")
         // $("#circle" + i).addClass("active")
@@ -46,7 +46,7 @@ function HandleRangeClick(e: MouseEvent, callback: (index: number) => void) {
     if (!spanNum) { return }
     spanNum = spanNum.replace('range', '')
     try {
-        console.log('clicked on range', spanNum)
+        // console.log('clicked on range', spanNum)
         const i = parseInt(spanNum)
         // $(".active").removeClass("active")
         // $("#range" + i).addClass("active")
@@ -64,7 +64,7 @@ function CalculatePosition(first: Time.BigDate, last: Time.BigDate, current: Tim
     const lastTotalRel = lastTotal - firstTotal
     const currentTotalRel = currentTotal - firstTotal
 
-    console.log(currentTotalRel, lastTotalRel)
+    // console.log(currentTotalRel, lastTotalRel)
 
     return currentTotalRel / lastTotalRel
 
@@ -85,8 +85,8 @@ function CalculatePosition(first: Time.BigDate, last: Time.BigDate, current: Tim
 }
 
 export function Show(dates: TimelinePoint[], ranges: TimelineInterval[], onDateClick: (index: number) => void, onRangeClick: (index: number) => void) {
-    console.log('Timeline points:', dates)
-    console.log('Timeline intervals:', ranges)
+    // console.log('Timeline points:', dates)
+    // console.log('Timeline intervals:', ranges)
     
     function GetMinDate() {
         let result = dates[0].date
@@ -131,7 +131,7 @@ export function Show(dates: TimelinePoint[], ranges: TimelineInterval[], onDateC
 
         if (!first || !last) { return }
 
-        console.log(first, last)
+        // console.log(first, last)
         
         for (let i = 0; i < dates.length; i++) {
             AppendCircle(i, CalculatePosition(first, last, dates[i].date), dates[i].label)

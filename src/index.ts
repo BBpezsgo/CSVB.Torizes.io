@@ -24,7 +24,9 @@ async function LoadArticle(articleId: string) {
     console.log(`Article \"${articleId}\" is loading ...`)
     const article = articles[articleId]
     
-    Utilities.TemplateAsyncRaw(`articles/${articleId}`, { })
+    Utilities.TemplateAsyncRaw(`${Utilities.BasePath()}articles/${articleId}/index`, {
+        dir: `${Utilities.BasePath()}articles/${articleId}`
+    })
         .then(element => {
             Utilities.GetElement('article').outerHTML = element
             console.log(`Article \"${articleId}\" loaded`)
@@ -102,14 +104,25 @@ function ShowArticleList() {
         const article = articles[articleId] as Article
         const newElement = document.createElement('div')
         newElement.classList.add('card')
+
+        let timeText = article.Time
+        if (timeText === undefined) { timeText = '' }
+        if (typeof timeText !== 'string') { timeText = `${timeText.Start} - ${timeText.End}` }
+
         let htmlBuilder = ''
-        htmlBuilder += `<a href="${Utilities.BasePath()}articles/base.html#${articleId}" class="hidden-link">`
+        htmlBuilder += `<a href="${Utilities.BasePath()}templates/base.html#${articleId}" class="hidden-link">`
         htmlBuilder += `<div class="card-top" id="card1-top">`
         htmlBuilder += `<div class="card-theme">${article.Group}</div>`
-        htmlBuilder += `<div class="card-image"><img src="./img/cards/${articleId}.jpg"></div>`
+        htmlBuilder += `<div class="card-image">`
+        htmlBuilder += `<object data="${Utilities.BasePath()}articles/${articleId}/card.jpg" type="image/jpg">`
+        htmlBuilder += `<img src="${Utilities.BasePath()}articles/${articleId}/card.png">`
+        htmlBuilder += `</object>`
+        htmlBuilder += `</div>`
         htmlBuilder += `</div>`
         htmlBuilder += `<div class="card-bottom" id="card1-bottom">`
-        htmlBuilder += `<div class="card-year" id="card1-year">2023</div>`
+        htmlBuilder += `<div class="card-year" id="card1-year">`
+        htmlBuilder += `${timeText}`
+        htmlBuilder += `</div>`
         htmlBuilder += ` <div class="card-name" id="card1-name"><h1>${article.Name}</h1></div>`
         htmlBuilder += `</div>`
         htmlBuilder += `</a>`
@@ -147,7 +160,7 @@ async function Main() {
         LoadArticle(uri.hash.replace('#', '').trim())
     })
 
-    if (window.location.pathname.endsWith('/articles/base.html')) {
+    if (window.location.pathname.endsWith('/templates/base.html')) {
         LoadArticle(window.location.hash.replace('#', '').trim())
     }
 
