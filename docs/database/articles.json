@@ -34,15 +34,61 @@
         "Name": "Horthy-korszak",
         "Group": "Újkor",
         "Time": { "Start": "1920.1.1.", "End": "1946.12.31." },
-        "ImageSources": {
-
-        }
+        "ImageSources": { }
     },
     "mo-vh-1": {
         "Name": "Magyarország a 2 vh. időszakában",
         "Group": "Újkor",
-        "ImageSources": {
-
-        }
+        "ImageSources": { }
+    },
+    "atheni-demokracia": {
+        "Name": "Az athéni demokrácia",
+        "Group": "Ókor",
+        "ImageSources": { }
+    },
+    "gorog-romai-epiteszet": {
+        "Name": "A görög és római építészet",
+        "Group": "Ókor",
+        "ImageSources": { }
+    },
+    "kozepkor-mezogazdasag": {
+        "Name": "A mezőgazdasági technika változásai",
+        "Group": "Középkor",
+        "ImageSources": { }
+    },
+    "kozepkor-varosok": {
+        "Name": "A középkori városok kialakulása és a városok jogai",
+        "Group": "Középkor",
+        "ImageSources": { }
+    },
+    "mariaterezia": {
+        "Name": "Mária Terézia",
+        "Group": "idk",
+        "ImageSources": { }
+    },
+    "eu": {
+        "Name": "Európai unió",
+        "Group": "idk",
+        "ImageSources": { }
+    },
+    "aranybulla": {
+        "Name": "Aranybulla",
+        "Group": "idk",
+        "ImageSources": { }
+    },
+    "naci": {
+        "Name": "Nácik",
+        "Group": "idk",
+        "ImageSources": { }
+    },
+    "ww2": {
+        "Name": "II. Világháború",
+        "Group": "idk",
+        "ImageSources": { }
+    },
+    "ww2-elozmenyek": {
+        "Name": "II. Világháború előzményei",
+        "Group": "idk",
+        "ImageSources": { }
     }
 }
