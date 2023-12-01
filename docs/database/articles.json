@@ -56,32 +56,32 @@
     },
     "mariaterezia": {
         "Name": "Mária Terézia",
-        "Group": "idk",
+        "Group": "Középkor",
         "ImageSources": { }
     },
     "eu": {
         "Name": "Európai unió",
-        "Group": "idk",
+        "Group": "Újkor",
         "ImageSources": { }
     },
     "aranybulla": {
         "Name": "Aranybulla",
-        "Group": "idk",
+        "Group": "Középkor",
         "ImageSources": { }
     },
     "naci": {
         "Name": "Nácik",
-        "Group": "idk",
+        "Group": "Újkor",
         "ImageSources": { }
     },
     "ww2": {
         "Name": "II. Világháború",
-        "Group": "idk",
+        "Group": "Újkor",
         "ImageSources": { }
     },
     "ww2-elozmenyek": {
         "Name": "II. Világháború előzményei",
-        "Group": "idk",
+        "Group": "Újkor",
         "ImageSources": { }
     }
 }
