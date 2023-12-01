@@ -57,11 +57,13 @@ header h1 {
 }
 
 #article section,
-#article p {
+#article p,
+#article ul,
+#article ol {
     margin: 0px 3% 60px 3%;
 }
 
-#article section h2 {
+#article h2 {
     font-weight: 500;
     font-size: 1.2em;
     margin: 0px 0px 10px 0px;
