@@ -109,14 +109,24 @@ function ShowArticleList() {
         if (timeText === undefined) { timeText = '' }
         if (typeof timeText !== 'string') { timeText = `${timeText.Start} - ${timeText.End}` }
 
+        const cardMetadataPath = `${Utilities.BasePath()}articles/${articleId}/card.json`
+
+        const randomColors = [
+            '#c4aa62',
+            '#b3a786',
+            '#e0e087',
+            '#d9794a',
+            '#ad5e53',
+            '#e0d44a',
+            '#8f7f5e',
+        ]
+
         let htmlBuilder = ''
         htmlBuilder += `<a href="${Utilities.BasePath()}templates/base.html#${articleId}" class="hidden-link">`
         htmlBuilder += `<div class="card-top" id="card1-top">`
         htmlBuilder += `<div class="card-theme">${article.Group}</div>`
-        htmlBuilder += `<div class="card-image">`
-        htmlBuilder += `<object data="${Utilities.BasePath()}articles/${articleId}/card.jpg" type="image/jpg">`
-        htmlBuilder += `<img src="${Utilities.BasePath()}articles/${articleId}/card.png">`
-        htmlBuilder += `</object>`
+        htmlBuilder += `<div class="card-image blurred-image" style="background-image: url('${Utilities.BasePath()}articles/${articleId}/card.lowres.webp'); background-color: ${randomColors[Math.round(Math.random() * (randomColors.length - 1))]}">`
+        htmlBuilder += `<img src="${Utilities.BasePath()}articles/${articleId}/card.jpg" loading="lazy" width="${article.CardMetadata.width}" height="${article.CardMetadata.height}">`
         htmlBuilder += `</div>`
         htmlBuilder += `</div>`
         htmlBuilder += `<div class="card-bottom" id="card1-bottom">`

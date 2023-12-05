@@ -5,7 +5,8 @@
         "Time": { "Start": "1948.1.1.", "End": "1956.10.23." },
         "ImageSources": {
             "1.jpg": { "Label": "Történelem tankönyv 12.", "Url": "https://www.tankonyvkatalogus.hu/site/kiadvany/OH-TOR12TB" }
-        }
+        },
+        "CardMetadata": {"width":609,"height":599,"extension":"jpg"}
     },
     "56": {
         "Name": "1956-os forradalom és szabadságharc",
@@ -13,7 +14,8 @@
         "Time": "1956.10.23.",
         "ImageSources": {
             "1.jpg": { "Label": "Történelem tankönyv 12.", "Url": "https://www.tankonyvkatalogus.hu/site/kiadvany/OH-TOR12TB" }
-        }
+        },
+        "CardMetadata": {"width":332,"height":412,"extension":"jpg"}
     },
     "kadar": {
         "Name": "Kádár-korszak",
@@ -21,67 +23,80 @@
         "Time": { "Start": "1956.10.23.", "End": "1989.1.1." },
         "ImageSources": {
             "1.jpg": { "Label": "Történelem tankönyv 12.", "Url": "https://www.tankonyvkatalogus.hu/site/kiadvany/OH-TOR12TB" }
-        }
+        },
+        "CardMetadata": {"width":253,"height":248,"extension":"jpg"}
     },
     "horthy": {
         "Name": "Horthy-korszak",
         "Group": "Újkor",
         "Time": { "Start": "1920.1.1.", "End": "1946.12.31." },
-        "ImageSources": { }
+        "ImageSources": { },
+        "CardMetadata": {"width":600,"height":700,"extension":"jpg"}
     },
     "mo-vh-1": {
         "Name": "Magyarország a 2 vh. időszakában",
         "Group": "Újkor",
-        "ImageSources": { }
+        "ImageSources": { },
+        "CardMetadata": {"width":550,"height":328,"extension":"jpg"}
     },
     "atheni-demokracia": {
         "Name": "Az athéni demokrácia",
         "Group": "Ókor",
-        "ImageSources": { }
+        "ImageSources": { },
+        "CardMetadata": {"width":964,"height":528,"extension":"jpg"}
     },
     "gorog-romai-epiteszet": {
         "Name": "A görög és római építészet",
         "Group": "Ókor",
-        "ImageSources": { }
+        "ImageSources": { },
+        "CardMetadata": {"width":1600,"height":900,"extension":"jpg"}
     },
     "kozepkor-mezogazdasag": {
         "Name": "A mezőgazdasági technika változásai",
         "Group": "Középkor",
-        "ImageSources": { }
+        "ImageSources": { },
+        "CardMetadata": {"width":320,"height":180,"extension":"jpg"}
     },
     "kozepkor-varosok": {
         "Name": "A középkori városok kialakulása és a városok jogai",
         "Group": "Középkor",
-        "ImageSources": { }
+        "ImageSources": { },
+        "CardMetadata": {"width":964,"height":528,"extension":"jpg"}
     },
     "mariaterezia": {
         "Name": "Mária Terézia",
         "Group": "Középkor",
-        "ImageSources": { }
+        "ImageSources": { },
+        "CardMetadata": {"width":860,"height":1084,"extension":"jpg"}
     },
     "eu": {
         "Name": "Európai unió",
         "Group": "Újkor",
-        "ImageSources": { }
+        "ImageSources": { },
+        "CardMetadata": {"width":860,"height":1075,"extension":"jpg"}
     },
     "aranybulla": {
         "Name": "Aranybulla",
         "Group": "Középkor",
-        "ImageSources": { }
+        "ImageSources": { },
+        "CardMetadata": {"width":693,"height":590,"extension":"jpg"}
     },
     "naci": {
         "Name": "Nácik",
         "Group": "Újkor",
-        "ImageSources": { }
+        "ImageSources": { },
+        "CardMetadata": {"width":600,"height":700,"extension":"jpg"}
     },
     "ww2": {
         "Name": "II. Világháború",
         "Group": "Újkor",
-        "ImageSources": { }
+        "ImageSources": { },
+        "CardMetadata": {"width":600,"height":700,"extension":"jpg"}
     },
     "ww2-elozmenyek": {
         "Name": "II. Világháború előzményei",
         "Group": "Újkor",
-        "ImageSources": { }
+        "ImageSources": { },
+        "CardMetadata": {"width":600,"height":700,"extension":"jpg"}
     }
 }

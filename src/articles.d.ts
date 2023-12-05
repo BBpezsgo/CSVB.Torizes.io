@@ -8,4 +8,5 @@ export type Article = {
             Url: string
         }
     }
+    CardMetadata: import('./card-metadata').default
 }
