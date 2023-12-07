@@ -63,10 +63,13 @@ header h1 {
     margin: 0px 3% 60px 3%;
 }
 
-#article h2 {
+#article h2,
+#article figcaption {
     font-weight: 500;
     font-size: 1.2em;
-    margin: 0px 0px 10px 0px;
+    margin: 5px 5px 10px 5px;
+    text-decoration: underline solid 4px #ffa500;
+    text-decoration-skip-ink: none;
 }
 
 #article section p {
@@ -107,6 +110,10 @@ a.hidden-link {
 
 footer a {
     font-variant: small-caps;
+}
+
+#article ol {
+    margin: 10px 10px 10px 40px !important;
 }
 
 /* #region ZoliMateSompala */
