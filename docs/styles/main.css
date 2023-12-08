@@ -116,6 +116,16 @@ footer a {
     margin: 10px 10px 10px 40px !important;
 }
 
+.header-left {
+    display: flex;
+}
+.header-left > span {
+    color: #fff;
+    margin: 10px;
+    padding-top: calc(5vh - 1em);
+    opacity: 50%;
+}
+
 /* #region ZoliMateSompala */
 
 * {
@@ -135,7 +145,6 @@ header {
 .header-left img {
     height: 10vh;
     padding: 10px;
-    position: absolute;
 }
 
 .header-left {
