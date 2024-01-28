@@ -60,7 +60,12 @@ header h1 {
 #article p,
 #article ul,
 #article ol {
-    margin: 0px 3% 60px 3%;
+    margin: 0px 3% 20px 3%;
+}
+
+#article ul,
+#article ol {
+    margin-left: 50px;
 }
 
 #article h2,
@@ -75,10 +80,9 @@ header h1 {
 #article section p {
     margin: 8px;
     margin-left: 5%;
-    float: left;
 }
 
-#article section img {
+#article img {
     float: right;
 }
 
@@ -131,7 +135,6 @@ footer a {
 * {
     box-sizing: border-box;
     margin: 0px;
-    padding: 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
