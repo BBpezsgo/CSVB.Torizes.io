@@ -25,7 +25,8 @@ async function LoadArticle(articleId: string) {
     const article = articles[articleId]
     
     Utilities.TemplateAsyncRaw(`${Utilities.BasePath()}articles/${articleId}/index`, {
-        dir: `${Utilities.BasePath()}articles/${articleId}`
+        ...article,
+        dir: `${Utilities.BasePath()}articles/${articleId}`,
     })
         .then(element => {
             Utilities.GetElement('article').outerHTML = element
@@ -40,6 +41,7 @@ async function LoadArticle(articleId: string) {
 
     document.title = `${article.Name} - Törizés`
     
+    /*
     if (article.ImageSources) {
         const imageSourcesConatiner = Utilities.GetElement('image-sources')
         for (const imageId in article.ImageSources) {
@@ -55,6 +57,7 @@ async function LoadArticle(articleId: string) {
             }
         }
     }
+    */
 }
 
 const articles = JSON.parse(HTTP.Get(Utilities.BasePath() + 'database/articles.json')) as { [article: string]: Article }
